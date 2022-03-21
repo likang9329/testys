@@ -11,12 +11,12 @@ class Base:
     def getUrl(self):
         config=cp.ConfigParser()
         root_dir = os.path.dirname(os.path.abspath('.'))
-        if root_dir.split('\\')[-1]=='ys':
+        if root_dir.split('\\')[-1]=='testys':
             path=root_dir+'\conf\config.ini'
             config.read(path,encoding='GB18030')
             return config.get('hj','url')
         else:
-            path=root_dir+'\ys\conf\config.ini'
+            path=root_dir+'\testys\conf\config.ini'
             config.read(path, encoding='GB18030')
 
         # config.read(r'C:\Users\Administrator\PycharmProjects\yhzx\conf\config.ini',encoding='GB18030 ')
